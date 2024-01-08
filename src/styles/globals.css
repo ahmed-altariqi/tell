@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  text-wrap: balance;
+  min-width: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsla(252, 92%, 85%, 0.216);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: hsla(252, 2%, 65%, 0.427);
+  /* #0d0d12 */
+}
+
+@layer base {
+  :root {
+    --background: 225 66.67% 3.25%;
+    --foreground: 280 100% 94.71%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 280 100% 94.71%;
+
+    --popover: 221.54 88.49% 3.57%;
+    --popover-foreground: 280 100% 94.71%;
+
+    --primary: 250, 90%, 76%;
+    --primary-foreground: 221.54 88.49% 3.57%;
+
+    --secondary: 240 16.9% 14%;
+    --secondary-foreground: 280 100% 94.71%;
+
+    --muted: 240 16.9% 14%;
+    --muted-foreground: 280 100% 94.71% / 56%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 250.36 100% 99.08%;
+    --accent-foreground: 280 100% 94.71%;
+
+    --destructive: 0 57.8% 44.6%;
+    --destructive-foreground: 280 100% 94.71%;
+
+    --border: 240 16.9% 14%;
+    --input: 240 16.9% 14%;
+    --ring: 259.41deg 100% 95.33% / 31%;
+
+    --radius: 0.4em;
+  }
+
+  .theme-coral {
+    --primary: 0 100% 77.05%;
+    --primary-dark: 0 100% 40%;
+  }
+
+  .theme-green {
+    --primary: 123 100% 76.08%;
+    --primary-dark: 123 100% 40.08%;
+  }
+
+  .theme-tellonym {
+    --primary: 333.82 81% 50%;
+    --primary-dark: 333.82 81% 20%;
+    --primary-foreground: 0, 0, 100%;
+  }
+
+  .theme-violet {
+    --primary: 250.36 90.16% 76.08%;
+    --primary-dark: 250.36 90.16% 40%;
+    --muted: 250.36 28.16% 14%;
+    --foreground: -108.46 100.43% 94.98%;
+    --background: 221.54 46.43% 5%;
+  }
+
+  .theme-tertiary {
+    --primary: 280 100% 85%;
+    --primary-dark: 280 100% 10%;
+    --muted: 250.36 28.16% 14%;
+    --foreground: -108.46 100.43% 94.98%;
+    --background: 221.54 46.43% 5%;
+  }
+
+  .theme-blue {
+    --primary: 226 100% 80.43%;
+    --primary-dark: 226 100% 40%;
+    --foreground: 226 100% 98.43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

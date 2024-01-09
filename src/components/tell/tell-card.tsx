@@ -72,7 +72,7 @@ type TellCardProps = {
   userInfo: UserInfo;
 };
 
-export function TellCard({ tell, userInfo }: TellCardProps) {
+export function TellCardProvider({ tell, userInfo }: TellCardProps) {
   const value = useMemo(() => ({ tell, userInfo }), [tell, userInfo]);
 
   return (

@@ -9,8 +9,7 @@ import { api } from "~/trpc/react";
 import type { Tell, UserInfo } from "~/types";
 
 import { Skeleton } from "~/components/ui/skeleton";
-// import { TellCardList } from "~/components/tell-card-list";
-import { TellCard } from "~/components/tell/tell-card";
+import { TellCardProvider } from "~/components/tell/tell-card";
 
 type InfiniteTellListProps = {
   isLoading: boolean;
@@ -82,7 +81,7 @@ export function InfiniteTellList({
             if (tell.reply === null) return null;
 
             return (
-              <TellCard
+              <TellCardProvider
                 key={tell.tellId}
                 tell={tell}
                 userInfo={
